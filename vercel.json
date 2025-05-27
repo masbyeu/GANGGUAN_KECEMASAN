@@ -1,45 +1,5 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "*.php",
-      "use": "vercel-php@0.6.0"
-    },
-    {
-      "src": "wp-content/themes/**",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "wp-content/plugins/**",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "wp-content/uploads/**",
-      "use": "@vercel/static"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/wp-admin/(.*)",
-      "dest": "/wp-admin/$1"
-    },
-    {
-      "src": "/wp-content/(.*)",
-      "dest": "/wp-content/$1"
-    },
-    {
-      "src": "/wp-includes/(.*)",
-      "dest": "/wp-includes/$1"
-    },
-    {
-      "src": "/(.*\\.php)$",
-      "dest": "/$1"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/index.php"
-    }
-  ],
   "functions": {
     "*.php": {
       "runtime": "vercel-php@0.6.0"
